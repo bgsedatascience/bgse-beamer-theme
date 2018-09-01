@@ -13,8 +13,8 @@
   \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
   \node[inner sep=0pt] (logo) at (.9,\the\paperheight - 30)
   {\includegraphics[width=.12\textwidth]{dsc-logo.pdf}};
-  \draw[thick] (.3,7.4) -- (.3,.75);
-  \draw[thick] (9,.6) -- (\the\paperwidth - 10,.6);
+  \draw[bgse-green,thick] (.3,7.4) -- (.3,.75);
+  \draw[bgse-green,thick] (9,.6) -- (\the\paperwidth - 10,.6);
   \node[below,black] at (10.75,.6) {\tiny barcelonagse.eu/datasciencecenter};
   \end{tikzpicture}
 }
@@ -24,7 +24,7 @@
 { 
    \begin{textblock}{12.5}(2,5.5)
    \begin{beamercolorbox}[sep=8pt]{title page header}
-     \usebeamerfont{title}\inserttitle\par%
+     \usebeamerfont{title}\textcolor{bgse-green}{\inserttitle}\par
       \usebeamerfont{author}\insertauthor%
       \usebeamerfont{author}\insertdate%
     \end{beamercolorbox}%
