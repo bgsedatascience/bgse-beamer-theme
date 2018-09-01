@@ -1,22 +1,16 @@
 \mode<presentation>
 
+\setbeamerfont{frametitle}{size*={12}{14},series=\bfseries}
+
 % Frame title
 \defbeamertemplate*{frametitle}{bgse}[1][]
 {
 \vskip1cm%
-  \begin{beamercolorbox}[wd=\paperwidth,ht=1.2cm]{frametitle} 
-  \begin{tikzpicture}
-  \useasboundingbox[fill=white](0,0) rectangle(\the\paperwidth,1.2);
-  \fill[orange] (0,0) rectangle(2.95,1.2);
-  \fill[blue!50!cyan!80] (3.05,0) rectangle(\the\paperwidth,1.2);
-   \ifx\insertframesubtitle\@empty%
-      {\node[anchor=west, white,font=\large] at (3.2,0.61){\insertframetitle};}
-      \else%
-      {\node[anchor= west, white,font=\large] at (3.2,0.81){\insertframetitle};%
-       \node[anchor= west, white,font=\small] at (3.2,0.41){\insertframesubtitle};}%
-      \fi
-  \end{tikzpicture}
-  \end{beamercolorbox}
+   \begin{textblock}{10}(5.5,0)
+     \begin{flushright}
+     \usebeamerfont{frametitle}\insertframetitle\par%
+     \end{flushright}
+   \end{textblock}
 }
 
 \mode<all>
