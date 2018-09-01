@@ -1,0 +1,36 @@
+\usepackage[absolute,overlay]{textpos} 
+
+\usefonttheme{bgse} 
+\usepackage[rm,light]{roboto} 
+\usepackage[T1]{fontenc}
+
+\setbeamerfont{title}{size*={14}{18},series=\bfseries}
+\setbeamerfont{author}{size*={10}{12},series=\mdseries}
+
+\mode<presentation>
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+  \node[inner sep=0pt] (logo) at (.9,\the\paperheight - 30)
+  {\includegraphics[width=.12\textwidth]{dsc-logo.pdf}};
+  \draw[thick] (.3,7.4) -- (.3,.75);
+  \draw[thick] (8,.6) -- (\the\paperwidth - 10,.6);
+  \node[below,black] at (10.2,.6) {\scriptsize barcelonagse.eu/datasciencecenter};
+  \end{tikzpicture}
+}
+
+% Title page
+\defbeamertemplate*{title page}{bgse}[1][]
+{ 
+   \begin{textblock}{12.5}(2,5.5)
+   \begin{beamercolorbox}[sep=8pt]{title page header}
+      \usebeamerfont{title}\inserttitle\par%
+      \usebeamerfont{author}\insertauthor%
+      \usebeamerfont{author}\insertdate%
+    \end{beamercolorbox}%
+    \end{textblock}
+  \vfill
+}
+
+\mode
+<all>
