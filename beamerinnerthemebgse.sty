@@ -7,6 +7,10 @@
 \setbeamerfont{title}{size*={14}{18},series=\bfseries}
 \setbeamerfont{author}{size*={10}{12},series=\mdseries}
 
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamertemplate{itemize subsubitem}[triangle]
+
 \mode<presentation>
 \setbeamertemplate{background}{
   \begin{tikzpicture}
@@ -25,8 +29,8 @@
    \begin{textblock}{12.5}(2,5.5)
    \begin{beamercolorbox}[sep=8pt]{title page header}
      \usebeamerfont{title}\textcolor{bgse-green}{\inserttitle}\par
-      \usebeamerfont{author}\insertauthor%
-      \usebeamerfont{author}\insertdate%
+      \usebeamerfont{author}{\insertauthor}\par%
+      \usebeamerfont{author}{\insertdate}\par%
     \end{beamercolorbox}%
     \end{textblock}
   \vfill
