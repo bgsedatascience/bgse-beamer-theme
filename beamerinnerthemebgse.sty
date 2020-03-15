@@ -1,11 +1,14 @@
-\usepackage[absolute,overlay]{textpos} 
+\usepackage[absolute,overlay]{textpos}
 
-\usefonttheme{bgse} 
-\usepackage[rm,light]{roboto} 
+\usefonttheme{bgse}
+\usepackage[rm,light]{roboto}
 \usepackage[T1]{fontenc}
 
 \setbeamerfont{title}{size*={14}{18},series=\bfseries}
 \setbeamerfont{author}{size*={10}{12},series=\mdseries}
+
+
+% \setbeamerfont{alerted text}{series=\bfseries}
 
 \setbeamertemplate{itemize item}[circle]
 \setbeamertemplate{itemize subitem}[triangle]
@@ -23,16 +26,20 @@
   \end{tikzpicture}
 }
 
+
+
 % Title page
 \defbeamertemplate*{title page}{bgse}[1][]
-{ 
+{
    \begin{textblock}{12.5}(2,5.5)
    \begin{beamercolorbox}[sep=8pt]{title page header}
      \usebeamerfont{title}\textcolor{bgse-green}{\inserttitle}\par
-      \usebeamerfont{author}{\insertauthor}\par%
-      \usebeamerfont{author}{\insertdate}\par%
+     \usebeamerfont{author}{\insertauthor}\par%
+     \usebeamerfont{author}{\insertdate}\par%
     \end{beamercolorbox}%
     \end{textblock}
+
+
   \vfill
 }
 
